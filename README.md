@@ -8,7 +8,7 @@
  ### How to use
 **1.** To create both the private-key and public-key pair use:
 
-`Rsa rsa(int key_bit_length);`
+```Rsa rsa(int key_bit_length);```
 This will create RSA objetc holding private and public key pairs.
 
 **2.** To encrypt and decrypt using an already exists pairs:
