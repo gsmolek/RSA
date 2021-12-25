@@ -34,8 +34,8 @@ class Rsa
     Rsa(const boost::multiprecision::cpp_int& e, const boost::multiprecision::cpp_int& d,const boost::multiprecision::cpp_int& n);
     std::string decrypt(const std::string& input);
     std::string encrypt(const std::string& plaintext);
-    static std::string encrypt(const std::string& plaintext, boost::multiprecision::cpp_int& e, boost::multiprecision::cpp_int& n);
-    static std::string decrypt(const std::string& cipher, boost::multiprecision::cpp_int& d, boost::multiprecision::cpp_int& n);
+    static std::string static_encryption(const std::string& plaintext, boost::multiprecision::cpp_int& e, boost::multiprecision::cpp_int& n);
+    static std::string static_decryption(const std::string& cipher, boost::multiprecision::cpp_int& d, boost::multiprecision::cpp_int& n);
     static std::string char_string_to_ascii_value_string(const std::string& char_string);
     static std::string ascii_value_string_to_char_string(const std::string& ascii_string);
 };

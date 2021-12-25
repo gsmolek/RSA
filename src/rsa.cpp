@@ -107,7 +107,7 @@ boost::multiprecision::cpp_int Rsa::generate_prime(int bit_length)
     }
     return 0;
 }
-std::string Rsa::encrypt(const std::string& plaintext, boost::multiprecision::cpp_int& e, boost::multiprecision::cpp_int& n)
+std::string Rsa::static_encryption(const std::string& plaintext, boost::multiprecision::cpp_int& e, boost::multiprecision::cpp_int& n)
 {
     std::string str{};
     std::string&& ascii_value_ref = char_string_to_ascii_value_string(plaintext);
@@ -118,7 +118,7 @@ std::string Rsa::encrypt(const std::string& plaintext, boost::multiprecision::cp
     stream >> str;
     return str; 
 }
-std::string Rsa::decrypt(const std::string& cipher, boost::multiprecision::cpp_int& d, boost::multiprecision::cpp_int& n)
+std::string Rsa::static_decryption(const std::string& cipher, boost::multiprecision::cpp_int& d, boost::multiprecision::cpp_int& n)
 {
     std::string str{};
     boost::multiprecision::cpp_int output(cipher);
