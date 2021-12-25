@@ -158,6 +158,7 @@ std::string Rsa::ascii_value_string_to_char_string(const std::string& ascii_stri
     }
     return output;
 }
+/*
 int main()
 {
     Rsa t(1024);
@@ -171,3 +172,4 @@ int main()
     std::cout<<"b: "<<Rsa::decrypt(a, t.d, t.n)<< std::endl;
     return 0;
 }
+*/
